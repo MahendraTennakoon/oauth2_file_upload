@@ -1,10 +1,12 @@
 <div>
   <h2 *ngIf="loading">Loading, Please Wait ...</h2>
   <div *ngIf="!loading">
-      <h2>Hi, {{data.name}}</h2>
-      <h4>UserName : {{data.login}}</h4>
+      <h1>UserName : {{data.login}}</h1>
       <div>
         <img src={{data.avatar_url}} width="250" height="250"/>
+        <div>Account created on: {{ data.created_at }}</div>
+        <div>Followers: {{ data.followers }}</div>
+        <div>Following: {{ data.following }}</div>
       </div>
   </div>
 </div>
